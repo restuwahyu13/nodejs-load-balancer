@@ -1,5 +1,5 @@
 {
-  "name": "node-load-balancer",
+  "name": "nodejs-load-balancer",
   "version": "1.0.0",
   "description": "Example node load balancer using express + docker + nginx",
   "main": "./dist/main.js",
@@ -35,7 +35,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/restuwahyu13/node-load-balancer"
+    "url": "https://github.com/restuwahyu13/nodejs-load-balancer"
   },
   "license": "MIT",
   "engines": {
