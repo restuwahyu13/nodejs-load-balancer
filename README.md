@@ -1,3 +1,3 @@
-# NODE LOAD BALANCER
+# NODEJS LOAD BALANCER
 
 Example node load balancer using express + docker + nginx
