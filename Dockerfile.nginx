@@ -1,0 +1,8 @@
+FROM nginx:stable-alpine
+USER ${USER}
+RUN mkdir /etc/nginx/ssl
+RUN chmod 755 /etc/nginx/ssl
+COPY ./certificates/cert.crt \
+  ./certificates/cert.key /etc/nginx/ssl/
+RUN chmod 755 /etc/nginx/ssl/cert.crt
+RUN chmod 755 /etc/nginx/ssl/cert.key
