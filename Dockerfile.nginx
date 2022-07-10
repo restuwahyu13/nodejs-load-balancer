@@ -1,8 +1,11 @@
 FROM nginx:stable-alpine
 USER ${USER}
 RUN mkdir /etc/nginx/ssl
-RUN chmod 755 /etc/nginx/ssl
-COPY ./certificates/cert.crt \
+RUN chmod 777 /etc/nginx/ssl
+COPY --chown=root:root ./certificates/cert.pem \
   ./certificates/cert.key /etc/nginx/ssl/
-RUN chmod 755 /etc/nginx/ssl/cert.crt
-RUN chmod 755 /etc/nginx/ssl/cert.key
+
+RUN chown root:root /etc/nginx/ssl/cert.pem
+RUN chmod 644 /etc/nginx/ssl/cert.pem
+RUN chown root:root /etc/nginx/ssl/cert.key
+RUN chmod 600 /etc/nginx/ssl/cert.key
